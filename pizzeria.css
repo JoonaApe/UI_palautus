@@ -1,0 +1,131 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+main {
+    background-color: #333;
+    padding: 20px;
+    margin: 40px auto;
+    width: 75%;
+    position: relative;
+    height: 450px
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    height: 65px;
+    border: 1px solid black;
+    margin-left: 0;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: gold;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 20px;
+    background: linear-gradient(0deg, gold, gold) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 250ms;
+    --bg-h: 100%;
+}
+li a:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+    color: black;
+}
+
+
+
+
+#logo {
+    font-size: 30px;
+    padding-right: 40px;
+    padding-left: 10px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: gold;
+}
+
+#teksti {
+    text-align: center;
+    margin: 100px auto;
+    margin-right:  50px;
+}
+.pizza {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+}
+#info {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: gold;
+    font-size: 16px;
+}
+#aboutus {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+#story {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+.image-container {
+    float: left;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+.text-container {
+    overflow: hidden;
+    margin-top: 45px;
+}
+
+.pizzaplace {
+    height: 200px;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@container sidebar (min-width: 700px) {
+    #info {
+        font-size: 2em;
+    }
+}
