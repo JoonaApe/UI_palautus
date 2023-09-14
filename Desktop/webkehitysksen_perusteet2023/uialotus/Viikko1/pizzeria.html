@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pizzeria.css">
+    <link rel="stylesheet" href="dialogi.css">
+    <script src="pizzeria.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&family=Sedgwick+Ave+Display&display=swap');
+    </style>
+</head>
+
+<body>
+<nav class="clearfix">
+    <ul>
+        <li><h3 id="logo">Metropolia Pizza Kebab</h3></li>
+        <li><a href="">Etusivu</a></li>
+        <li><a href="">Ruokalistat</a></li>
+        <li><a href="">Yhteystiedot</a></li>
+    </ul> 
+</nav>
+<header class="hero">
+    <div class="hero-content">
+        <img src="kuvat/pizzabackgroud.jpg" alt="background photo" class="pizzabackground">
+    </div>
+</header>
+
+
+<div id="teksti">
+    <h3>Tähän tulee tietoa myöhemmin</h3>
+    <h1 class="h1">Dialog</h1>
+    <button id="open_dialog">Open Dialog</button>
+        
+</div>
+
+<main>
+    <img src="kuvat/pizza.webp" alt="cartoon picture of pizza slice." class="pizza">
+    <div class="image-container">
+        <img src="kuvat/pizzaplace.jpg" alt="Picture of pizza restaurant" class="pizzaplace">
+    </div>
+    <div class="text-container">
+        <h1 id="aboutus">Lisää meistä</h1>
+        <h1 id="story">Tämä on meidän tarinamme</h1>
+        <p id="info">
+
+        Metropolia Pizza Kebab on herkullisten pizzojen erikoisravintola, joka tarjoaa makuelämyksiä Metropolia korkeakoulun opiskelijoille ja henkilökunnalle edulliseen hintaan.
+        Meidän ainutlaatuiset reseptimme ja laadukkaat raaka-aineet takaavat, että jokainen suupalasi on täynnä makua ja nautintoa.<br>
+
+        Ravintolamme valikoimaan kuuluu laaja valikoima erilaisia pizzoja, joista voit valita suosikkisi.
+        Olitpa sitten klassisen Margheritan ystävä tai haluat kokeilla jotain uutta ja jännittävää, meillä on varmasti jotain tarjottavana sinulle.
+        Pizzamme valmistetaan tuoreista ja laadukkaista aineksista, jotta voimme taata parhaan mahdollisen maun jokaisessa palassa.<br><br>
+        Metropolia Pizza Kebab on sitoutunut tarjoamaan opiskelijoille ja henkilökunnalle maukasta ruokaa ilman että se rasittaa kukkaroasi.
+        Uskomme, että hyvä ruoka ei tarvitse olla kallista, ja haluamme tarjota vaihtoehdon, joka täyttää vatsasi ja miellyttää makunystyröitäsi ilman suurta hintalappua.
+        Metropolia Pizza Kebab toivottaa sinut tervetulleeksi herkuttelun maailmaan!</p>
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2023 Metropolia Pizza Kebab.</p>
+</footer>
+
+    <dialog>
+        <h2 id="dialog_title" class="h2">Rekisteröidy tiedoillasi.</h2>
+      <img src="https://native-dialog.surge.sh/location-service.svg" alt="Illustration of Location Services" />
+      <form action="" method="get" class="form-example">
+        <div class="form-example">
+          <label for="name">Syötä nimesi: </label>
+          <input type="text" name="name" id="name" required placeholder="Nimi tähän" minlength="3"/>
+        </div>
+        <div class="form-example">
+          <label for="email">Sähköpostiosoite: </label>
+          <input type="email" name="email" id="email" required placeholder="Sähköposti tähän" />
+        </div>
+        <div class="form-example">
+            <label for="password">Salasana: </label>
+            <input type="password" name="password" id="password" required placeholder="Salasana"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="this.setCustomValidity('Salasanassa tulee olla yksi iso kirjain, yksi numero ja vähintään 8 merkkiä.')"  />
+          </div>
+      <p id="dialog_description">
+      </p>
+      <div class="flex flex-space-between">
+          <div class="form-example">
+              <button type="submit" id="confirm_dialog" class="cta">Lähetä</button>
+            </div>
+        <button id="close_dialog">Sulje</button>
+      </div>
+    </dialog>
+
+</body>
+</html>
